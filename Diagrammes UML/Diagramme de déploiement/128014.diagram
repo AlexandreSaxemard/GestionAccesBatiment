@@ -1,0 +1,74 @@
+format 224
+
+deploymentnodecanvas 128014 deploymentnode_ref 128014 // M5Stack
+  xyzwh 56 402 2000 191 149
+end
+componentcanvas 128142 component_ref 128014 // Lecteur Bluetooth
+  
+  xyzwh 75 463 2005 143 51
+end
+note 128270 "Wifi = LPiOTIA
+"
+  xyzwh 101 622 2000 91 35
+deploymentnodecanvas 129678 deploymentnode_ref 128398 // Raspberry PI
+  xyzwh 39 26 2000 227 245
+end
+componentcanvas 129934 component_ref 128654 // Broker MQTT
+  
+  xyzwh 80 184 2005 143 51
+end
+componentcanvas 130062 component_ref 128526 // NodeRed
+  
+  xyzwh 80 73 2005 143 51
+end
+textcanvas 130190 "Requête MQTT"
+  xyzwh 51 339 2000 71 28
+textcanvas 130318 "[SUB]/ZoneA"
+  xyzwh 168 358 2000 63 14
+deploymentnodecanvas 130446 deploymentnode_ref 128526 // Serrure 
+  xyzwh 544 615 2000 97 33
+end
+deploymentnodecanvas 130702 deploymentnode_ref 128782 // Digicode
+  xyzwh 727 615 2000 62 32
+end
+fragment 130958 "App TheKeys"
+  xyzwh 510 559 2000 303 122
+end
+deploymentnodecanvas 131214 deploymentnode_ref 128654 // Téléphone
+  xyzwh 556 460 2000 71 32
+end
+deploymentnodecanvas 132878 deploymentnode_ref 128910 // Gateway
+  xyzwh 444 238 2000 66 32
+end
+deploymentnodecanvas 133006 deploymentnode_ref 129038 // Réseau IUT
+  xyzwh 381 39 2000 195 127
+end
+componentcanvas 133134 component_ref 128782 // Serveur TCP
+  
+  xyzwh 405 89 2005 143 51
+end
+deploymentnodecanvas 133390 deploymentnode_ref 129166 // M5Camera
+  xyzwh 845 274 2000 181 117
+end
+componentcanvas 133518 component_ref 128910 // Reconnaissance faciale
+  
+  xyzwh 861 320 2005 143 51
+end
+note 133646 "Wifi = LPiOTIA
+"
+  xyzwh 698.5 324.5 2000 91 35
+line 129806 ----
+  from ref 128014 z 2001 label "[PUB]/ZoneA" max_width 255 xyz 169 314 3000 to ref 129678
+line 131086 ----
+  from ref 130702 z 2001 label "BLT" max_width 255 xyz 674 616 3000 to ref 130446
+line 132622 ----
+  from ref 131214 z 2001 label "BLT" max_width 255 xyz 614 526.5 3000 to ref 130446
+line 132750 ----
+  from ref 131214 z 2001 label "BLT" max_width 255 xyz 391 460.5 3000 to ref 128014
+line 133262 ----
+  from ref 132878 z 2001 label "RJ45" max_width 255 xyz 495.5 189.5 3000 to ref 133006
+line 128398 -_-_
+  from ref 128270 z 2001 to ref 128014
+line 133774 -_-_
+  from ref 133390 z 2001 to ref 133646
+end
