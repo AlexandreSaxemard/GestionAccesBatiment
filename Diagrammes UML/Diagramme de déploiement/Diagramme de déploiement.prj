@@ -83,6 +83,15 @@ format 224
 
     deploymentnode 129166 "M5Camera"
     end
+
+    deploymentnode 129294 "Badge"
+    end
+
+    deploymentnode 129422 "Lecteur RFID"
+    end
+
+    deploymentnode 129550 "Base de données"
+    end
   end
 
   componentview 128014 "Composant"
@@ -115,6 +124,9 @@ format 224
 
     component 128910 "Reconnaissance faciale"
       stereotype "service"
+    end
+
+    component 129038 "InfluxDB"
     end
   end
 end

@@ -1,0 +1,13 @@
+window_sizes 1600 837 206 1389 789 0
+
+diagrams
+  active  deploymentdiagram_ref 128014 // GestionAccesBatiment
+    1389 789 90 A0 24 0
+end
+show_stereotypes
+selected component_ref 129038 // InfluxDB
+open
+  deploymentview_ref 128014 // GestionAccesBatiment
+  componentview_ref 128014 // Composant
+end
+end
