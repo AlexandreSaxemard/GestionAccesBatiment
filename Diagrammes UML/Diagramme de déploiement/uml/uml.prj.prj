@@ -1,6 +1,6 @@
 format 224
-"Diagramme de déploiement"
-  revision 1
+"uml.prj"
+  revision 2
   modified_by 14 "alexs"
 
 
@@ -35,7 +35,7 @@ format 224
    show_infonote yes drawing_language uml show_stereotype_properties no end
   
   class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
-  dpi 96
+  dpi 0
   font_size 8
   diagram_format A4
 
@@ -44,11 +44,11 @@ format 224
 
   mark_for_import
   
-  deploymentview 128014 "GestionAccesBatiment"
+  deploymentview 128014 "uml"
     //deployment diagram settings
     deploymentdiagramsettings
      end
-    deploymentdiagram 128014 "GestionAccesBatiment"
+    deploymentdiagram 128014 "uml"
       deploymentdiagramsettings
        end
       size A0
@@ -57,76 +57,75 @@ format 224
     deploymentnode 128014 "M5Stack"
     end
 
-    deploymentnode 128142 "Broker MQTT"
+    deploymentnode 128142 "Raspberry PI"
     end
 
-    deploymentnode 128270 "Serveur WAMP"
+    deploymentnode 128270 "Base de données"
     end
 
-    deploymentnode 128398 "Raspberry PI"
+    deploymentnode 128398 "M5Camera"
     end
 
-    deploymentnode 128526 "Serrure "
+    deploymentnode 128526 "Lecteur NFC"
     end
 
-    deploymentnode 128654 "Téléphone"
+    deploymentnode 128654 "Badge"
     end
 
-    deploymentnode 128782 "Digicode"
+    deploymentnode 128782 "Téléphone"
     end
 
-    deploymentnode 128910 "Gateway"
+    deploymentnode 128910 "Réseau IUT"
     end
 
-    deploymentnode 129038 "Réseau IUT"
+    deploymentnode 129038 "Gateway"
     end
 
-    deploymentnode 129166 "M5Camera"
+    deploymentnode 129166 "Digicode"
     end
 
-    deploymentnode 129294 "Badge"
+    deploymentnode 129294 "Serrure"
     end
 
-    deploymentnode 129422 "Lecteur RFID"
+    deploymentnode 129422 "Arduino nano"
     end
 
-    deploymentnode 129550 "Base de données"
+    deploymentnode 129550 "Serrure électronique"
     end
   end
 
-  componentview 128014 "Composant"
+  componentview 128014 "composants"
     //component diagram settings
     componentdiagramsettings
      end
-    component 128014 "Lecteur Bluetooth"
+    component 128014 "NodeRed"
     end
 
-    component 128142 "Windows 10"
-      stereotype "SE"
+    component 128142 "Broker MQTT"
     end
 
-    component 128270 "MySQL"
-      stereotype "service"
+    component 128270 "InfluxDB"
     end
 
-    component 128398 "Apache + PHP"
-      stereotype "service"
+    component 128398 "Reconnaissance Faciale"
     end
 
-    component 128526 "NodeRed"
+    component 128526 "Lecteur Bluetooth"
     end
 
-    component 128654 "Broker MQTT"
+    component 128654 "Serveur TCP"
     end
 
-    component 128782 "Serveur TCP"
+    component 128782 "Lecteur RFID"
     end
 
-    component 128910 "Reconnaissance faciale"
-      stereotype "service"
+    component 128910 "Keypad"
     end
 
-    component 129038 "InfluxDB"
+    component 129038 "ESP8266"
+    end
+
+    component 129166 "AMS 1117"
     end
   end
 end
