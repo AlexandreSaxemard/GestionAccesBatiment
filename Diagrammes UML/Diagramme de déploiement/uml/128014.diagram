@@ -4,31 +4,31 @@ deploymentnodecanvas 128014 deploymentnode_ref 128014 // M5Stack
   xyzwh 545 548 2000 161 125
 end
 deploymentnodecanvas 128142 deploymentnode_ref 128142 // Raspberry PI
-  xyzwh 528.4 287.4 2000 191 183
+  xyzwh 528 287 2000 191 183
 end
 deploymentnodecanvas 128270 deploymentnode_ref 128270 // Base de données
-  xyzwh 536.4 20.6 2000 175 135
+  xyzwh 536 20 2000 175 135
 end
 deploymentnodecanvas 128398 deploymentnode_ref 128398 // M5Camera
-  xyzwh 1050.6 131.6 2000 195 123
+  xyzwh 1050 131 2000 195 123
 end
 deploymentnodecanvas 128526 deploymentnode_ref 128526 // Lecteur NFC
-  xyzwh 940 401.6 2000 81 32
+  xyzwh 940 401 2000 81 32
 end
 deploymentnodecanvas 128654 deploymentnode_ref 128654 // Badge
-  xyzwh 945 499.2 2000 52 32
+  xyzwh 945 499 2000 52 32
 end
 deploymentnodecanvas 128782 deploymentnode_ref 128782 // Téléphone
-  xyzwh 589.2 739.2 2000 71 32
+  xyzwh 589 739 2000 71 32
 end
 deploymentnodecanvas 129166 deploymentnode_ref 129166 // Digicode
-  xyzwh 1286.6 720.8 2000 62 32
+  xyzwh 1286 720 2000 62 32
 end
 deploymentnodecanvas 129294 deploymentnode_ref 129294 // Serrure
-  xyzwh 1121.2 717.4 2000 58 33
+  xyzwh 1121 717 2000 58 33
 end
 deploymentnodecanvas 129422 deploymentnode_ref 128782 // Téléphone
-  xyzwh 1115 599.2 2005 71 32
+  xyzwh 1115 599 2005 71 32
 end
 componentcanvas 129550 component_ref 128526 // Lecteur Bluetooth
   
@@ -55,28 +55,28 @@ end
 note 131598 "Wifi = LPiOTIA"
   xyzwh 1110.7 297.7 2000 89 35
 textcanvas 132110 "[PUB]/ZoneA"
-  xyzwh 644.2 525.2 2000 81 20
+  xyzwh 644 525 2000 81 20
 textcanvas 132238 "[SUB]/ZoneA"
   xyzwh 645 478 2000 83 14
 textcanvas 132366 "[SUB]/ZoneB"
-  xyzwh 731 397.2 2000 77 16
+  xyzwh 731 397 2000 77 16
 textcanvas 132494 "[PUB]/ZoneB"
-  xyzwh 864.2 394.8 2000 77 14
+  xyzwh 864 394 2000 77 14
 textcanvas 132622 "Requête MQTT"
-  xyzwh 786.8 360.6 2000 71 14
+  xyzwh 786 360 2000 71 14
 textcanvas 132750 "Ondes Radios"
-  xyzwh 996.2 463.2 2000 68 14
+  xyzwh 996 463 2000 68 14
 deploymentnodecanvas 133006 deploymentnode_ref 129422 // Arduino nano
-  xyzwh 226.4 219.4 2000 215 329
+  xyzwh 226 219 2000 215 329
 end
 deploymentnodecanvas 133262 deploymentnode_ref 129550 // Serrure électronique
-  xyzwh 271.6 618.8 2000 120 32
+  xyzwh 271 618 2000 120 32
 end
 fragment 133774 "App TheKeys"
   xyzwh 1055 680.8 2000 321 92
 end
 textcanvas 134158 "BLT"
-  xyzwh 1226.8 711.2 2006 51 17
+  xyzwh 1226 711 2006 51 17
 componentcanvas 134414 component_ref 128782 // Lecteur RFID
   
   xyzwh 253 287.6 2006 143 51
@@ -94,18 +94,15 @@ componentcanvas 134798 component_ref 129166 // AMS 1117
   xyzwh 256.8 481.8 2005 143 51
 end
 line 130318 ----
-  from ref 128782 z 2001 label "BLT" max_width 255 xyz 592 697.5 3000 to ref 128014
+  from ref 128782 z 2001 label "BLT" max_width 255 xyz 592 697 2001 to ref 128014
 line 130702 ----
-  from ref 128014 z 2001 label "Requête MQTT" max_width 255 xyz 539.5 504.5 3000 to ref 128142
-line 131214 ---- decenter_begin 435
-  from ref 128270 z 2001 to point 1143 80.6
-  line 131342 z 2001 to ref 128398
-line 131854 ---- decenter_begin 709
+  from ref 128014 z 2001 label "Requête MQTT" max_width 255 xyz 539 504 2001 to ref 128142
+line 131854 ---- decenter_begin 708
   from ref 128142 z 2001 to ref 128526
 line 131982 ---- decenter_begin 652
   from ref 128654 z 2001 to ref 128526
 line 133134 ----
-  from ref 133006 z 2001 label "Wifi" max_width 255 xyz 474.5 365.5 3000 to ref 128142
+  from ref 133006 z 2001 label "Wifi" max_width 255 xyz 474 365 2001 to ref 128142
 line 133390 ----
   from ref 133262 z 2001 to ref 133006
 line 133518 ----
@@ -113,7 +110,9 @@ line 133518 ----
 line 133902 ----
   from ref 129294 z 2001 to ref 129166
 line 134286 ----
-  from ref 129422 z 2006 label "BLT" max_width 255 xyz 1160 661 3000 to ref 129294
+  from ref 129422 z 2006 label "BLT" max_width 255 xyz 1160 661 2006 to ref 129294
+line 134926 ----
+  from ref 128398 z 2001 to ref 128142
 line 130190 -_-_
   from ref 130062 z 2001 to ref 128014
 line 131726 -_-_

@@ -1,6 +1,6 @@
 format 224
 "uml.prj"
-  revision 1
+  revision 2
   modified_by 14 "alexs"
 
 
@@ -44,4 +44,88 @@ format 224
 
   mark_for_import
   
+  deploymentview 128014 "uml"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    deploymentdiagram 128014 "uml"
+      deploymentdiagramsettings
+       end
+      size A0
+    end
+
+    deploymentnode 128014 "M5Stack"
+    end
+
+    deploymentnode 128142 "Raspberry PI"
+    end
+
+    deploymentnode 128270 "Base de données"
+    end
+
+    deploymentnode 128398 "M5Camera"
+    end
+
+    deploymentnode 128526 "Lecteur NFC"
+    end
+
+    deploymentnode 128654 "Badge"
+    end
+
+    deploymentnode 128782 "Téléphone"
+    end
+
+    deploymentnode 128910 "Réseau IUT"
+    end
+
+    deploymentnode 129038 "Gateway"
+    end
+
+    deploymentnode 129166 "Digicode"
+    end
+
+    deploymentnode 129294 "Serrure"
+    end
+
+    deploymentnode 129422 "Arduino nano"
+    end
+
+    deploymentnode 129550 "Serrure électronique"
+    end
+  end
+
+  componentview 128014 "composants"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 128014 "NodeRed"
+    end
+
+    component 128142 "Broker MQTT"
+    end
+
+    component 128270 "InfluxDB"
+    end
+
+    component 128398 "Reconnaissance Faciale"
+    end
+
+    component 128526 "Lecteur Bluetooth"
+    end
+
+    component 128654 "Serveur TCP"
+    end
+
+    component 128782 "Lecteur RFID"
+    end
+
+    component 128910 "Keypad"
+    end
+
+    component 129038 "ESP8266"
+    end
+
+    component 129166 "AMS 1117"
+    end
+  end
 end
