@@ -5,15 +5,15 @@
 #include "PubSubClient.h"
 
 // Configuration du réseau WIFI
-const char* ssid = "AZUR INFO";
-const char* password = "0918273645";
+const char* ssid = "LPiOTIA";
+const char* password = "";
 
 static const char* connectionString = "";
 
-const char* mqtt_server = "172.24.102.120";
-const char* badge_topic = "Arduino/Test2";
+const char* mqtt_server = "192.168.143.149";
+const char* badge_topic = "Campus/Batiment";
 
-const char* clientID = "Arduino_ZoneB";
+const char* clientID = "ZoneB";
 
 WiFiClient wifiClient;
 PubSubClient client(mqtt_server, 1883, wifiClient);
@@ -26,6 +26,7 @@ MFRC522 rfid(SS_PIN, RST_PIN);
 MFRC522::MIFARE_Key key;
 
 String tag;
+//String tagUID;
 
 void setup() {
   Serial.begin(9600);
@@ -61,11 +62,12 @@ void loop() {
     }
     Serial.println("UID du badge: ");
     Serial.println(tag);
+    if(client.publish(badge_topic, String(tag).c_str())){
+    Serial.println("UID du badge envoyé!");
+    }
     tag = "";
 
-    client.publish(badge_topic, (byte*) &nuidPICC, sizeof(nuidPICC));
-    Serial.println("UID du badge envoyé!");
-  
+    
     rfid.PICC_HaltA();
     rfid.PCD_StopCrypto1();
   }
