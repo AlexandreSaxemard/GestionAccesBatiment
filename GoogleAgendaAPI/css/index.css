@@ -1,0 +1,10 @@
+a{
+    color: white;
+}
+a:hover {
+    color: white;
+}
+.btn-primary:last-child {
+    background-color: blue;
+    border-color: blue;
+}
