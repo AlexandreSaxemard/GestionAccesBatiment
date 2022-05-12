@@ -20,7 +20,7 @@ const char* clientID = "ZoneA";
 WiFiClient wifiClient;
 PubSubClient client(mqtt_server, 1883, wifiClient);
 
-int scanTime = 5; //En secondes
+int scanTime = 10; //En secondes
 BLEScan* pBLEScan;
 
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
@@ -51,7 +51,7 @@ void setup() {
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan(); //Creer un nouveau scan
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  pBLEScan->setActiveScan(true); //
+  pBLEScan->setActiveScan(true); 
   pBLEScan->setInterval(100);
   pBLEScan->setWindow(99);  // 
 }
