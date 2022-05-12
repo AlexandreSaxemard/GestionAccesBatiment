@@ -10,7 +10,7 @@ const char* password = "";
 
 static const char* connectionString = "";
 
-const char* mqtt_server = "192.168.143.149";
+const char* mqtt_server = "192.168.143.151";
 const char* badge_topic = "Campus/Batiment";
 
 const char* clientID = "ZoneB";
