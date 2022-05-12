@@ -1,6 +1,13 @@
-window_sizes 1600 837 162 1433 791 0
+window_sizes 1600 837 80 1515 791 0
 
+diagrams
+  active  deploymentdiagram_ref 128014 // uml
+    1477 1109 100 A0 12 0
+end
 show_stereotypes
-selected 
-package_ref 129 // uml.prj
+selected component_ref 135694 // LecteurRFID
+open
+  deploymentview_ref 128014 // uml
+  componentview_ref 128014 // composants
+end
 end

@@ -54,7 +54,7 @@ format 224
       size A0
     end
 
-    deploymentnode 128014 "M5Stack"
+    deploymentnode 128014 "M5Stick-C"
     end
 
     deploymentnode 128142 "Raspberry PI"
@@ -87,7 +87,7 @@ format 224
     deploymentnode 129294 "Serrure"
     end
 
-    deploymentnode 129422 "Arduino nano"
+    deploymentnode 129422 "Arduino Uno"
     end
 
     deploymentnode 129550 "Serrure électronique"
@@ -104,7 +104,7 @@ format 224
     component 128142 "Broker MQTT"
     end
 
-    component 128270 "InfluxDB"
+    component 128270 "phpMyAdmin"
     end
 
     component 128398 "Reconnaissance Faciale"
@@ -126,6 +126,9 @@ format 224
     end
 
     component 129166 "AMS 1117"
+    end
+
+    component 135694 "LecteurRFID"
     end
   end
 end
